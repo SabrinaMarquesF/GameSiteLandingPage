@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        .detail-description {
+          opacity: 0; 
+          transition: opacity 0.5s ease; 
+        }
+        
+        .visible {
+          opacity: 1; 
+        }
+      </style>
+    <title>UndeadBestPlayers</title>
+</head>
+<body>
+    <script src="img.js"></script>
+    <header id="event-description">
+        <div id="disclaimer">
+            <h2>UNDEAD BLOCKS</h2>
+            <p class="about-event">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p>Início do Campeonato:</p>
+            <p class="event-date">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </header>
+    <section id="key-benefits">
+        <h2>O que você vai encontrar:</h2>
+        <div class="benefits">
+            <div class="benefit">
+                <div id="benefit-1" class="benefit-img"></div>
+                <p>Exemplo de NFT + Descrição 1.</p>
+            </div>
+            <div class="benefit">
+                <div id="benefit-2" class="benefit-img"></div>
+                <p>Exemplo de NFT + Descrição 2.</p>
+            </div>
+            <div class="benefit">
+                <div id="benefit-3" class="benefit-img"></div>
+                <p>Exemplo de NFT + Descrição 3.</p>
+            </div>
+            <div class="benefit">
+                <div id="benefit-4" class="benefit-img"></div>
+                <p>Exemplo de NFT + Descrição 4.</p>
+            </div>
+            <div class="benefit">
+                <div id="benefit-5" class="benefit-img"></div>
+                <p>Exemplo de NFT + Descrição 5.</p>
+            </div>
+            <div class="benefit">
+                <div id="benefit-6" class="benefit-img"></div>
+                <p>Exemplo de NFT + Descrição 6.</p>
+            </div>
+        </div>
+    </section>
+    <div class="gallery-arrows">
+        <button id="prev-slide" class="arrow-button">&#9664;</button>
+        <button id="next-slide" class="arrow-button">&#9654;</button>
+    </div>
+    
+    
+    <section id="location">
+        <div id="address">
+            <i class="bi bi-youtube"></i>
+            <div id="address-details">
+                <p>Suporte 24/7</p>
+                <p>Campeonatos semanais</p>
+                <p>Abertura: </p>
+            </div>
+        </div>
+        <div id="about-location">
+            <h3>SOBRE O UNDEAD</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt tortor vel sapien eleifend mollis. Nam ultricies mollis maximus. Praesent congue lectus nec ligula porta, quis viverra ligula lobortis. Aliquam et tristique leo, et luctus lectus. Sed molestie sed tellus in porttitor.
+            </p>
+        </div>
+    </section>
+    <section id="details">
+        <div class="detail" id="detail-1">
+            <iframe width="960" height="540" src="https://www.youtube.com/embed/riBXGzPl1qs" frameborder="0" allowfullscreen></iframe>
+            <div class="detail-description">
+                <h3>Mais informações:</h3>
+            </div>
+        </div>
+        <div class="detail" id="detail-2">
+            <div class="detail-description">
+                <h3>Detalhes</h3>
+                <ul>
+                    <li>Lidar com equipe</li>
+                    <li>Como jogos podem se tornar renda</li>
+                    <li>Games ao seu favor</li>
+                    <li>Como surgiu os primeiros jogos</li>
+                    <li>Crie o seu game</li>
+                    <li>Monte o seu setup gamer!</li>
+                    <li>E muito mais...</li>
+                </ul>
+            </div>
+            <img src="img/undead2.png" alt="notebookgamer">
+        </div>
+        <div class="detail" id="detail-3">
+            <img src="img/undead3.jpg" alt="consolegamer"> 
+            <div class="detail-description">
+                <h3>Algumas partes do evento</h3>
+                <ul>
+                    <li>Jogos de conehciemntos gerais</li>
+                    <li>Melhor mira(FPS)</li>
+                    <li>Pluzze</li>
+                    <li>x1 ou 2v2</li>
+                    <li>Prêmios por cada vitória</li>
+                    <li>Entre outros</li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            function checkScroll() {
+              var details = document.querySelectorAll(".detail");
+              
+              
+              details.forEach(function(detail) {
+                var detailDescription = detail.querySelector(".detail-description");
+                
+                
+                var detailTop = detail.offsetTop - window.innerHeight * 0.7;
+                
+                
+                var scrollY = window.scrollY || window.pageYOffset;
+                
+                
+                if (scrollY > detailTop) {
+                  detailDescription.style.opacity = 1; 
+                }
+              });
+            }
+        
+            
+            window.addEventListener("scroll", checkScroll);
+        
+            
+            checkScroll();
+          </script>
+    </section>
+    <section id="cta">
+        <h3>Gostou? Então se inscreva:</h3>
+        <a href="https://discord.gg/Ejtd8QH8"> 
+            <i class="bi bi-discord"></i>
+        </a>
+    </section>    
+    <footer id="footer">
+        <h3>Undead Best Players</h3>
+        <p>Jogando para vencer</p>
+        <p><span>Entre contato: </span>Lorem ipsum dolor sit amet</p>
+        <p><span>Telefone: </span>(00)0000-0000</p>
+    </footer>
+</body>
+</html>
